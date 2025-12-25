@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="梅川伊芙的個人網頁">
+  <!-- Open Graph / Social Media Preview Tags -->
+  <meta property="og:title" content="梅川伊芙的個人網頁" />
+  <meta property="og:description" content="哈囉！我是梅川伊芙，這是我的個人網頁，裡面有各種關於我的自我介紹！" />
+  <meta property="og:image" content="https://urgay-334.github.io/image/profile.jpg" />
+  <meta property="og:url" content="https://urgay-334.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <!-- Twitter/X Card (加強相容性) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="梅川伊芙的個人網頁" />
+  <meta name="twitter:description" content="哈囉！我是梅川伊芙，這是我的個人網頁，裡面有各種關於我的自我介紹！" />
+  <meta name="twitter:image" content="https://urgay-334.github.io/image/profile.jpg" />
+  <title>梅川伊芙的個人網頁</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('image/w.png') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #f0f0f0;
+      position: relative;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: min(80vw, 1000px);
+      margin: 0 auto;
+      padding: calc(clamp(60px, 10vh, 80px) + 2.5em) clamp(15px, 3vw, 20px) clamp(15px, 3vw, 20px);
+      min-height: calc(100vh - clamp(60px, 10vh, 80px));
+    }
+    h1 {
+      color: rgb(92, 211, 247);
+      text-align: center;
+      font-size: clamp(1.5em, 4vw, 2em);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: clamp(10px, 2vw, 15px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.8);
+      padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+      border-radius: 10px;
+      z-index: 3;
+      margin: 0;
+    }
+    .section {
+      margin: clamp(15px, 3vw, 20px) 0;
+      background: rgba(255, 255, 255, 0.8);
+      padding: clamp(10px, 4vw, 15px);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .section:hover {
+      transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .section h2 {
+      text-align: center;
+      font-size: clamp(1.5em, 3.5vw, 1.8em);
+      color: rgb(92, 211, 247);
+      margin: 0 0 clamp(10px, 2vw, 15px) 0;
+    }
+    .section p, .section .game-list, .section .anime-list {
+      font-size: clamp(1em, 2.5vw, 1.2em);
+      line-height: 1.6;
+      margin: 0 0 clamp(8px, 1.5vw, 12px) 0;
+      color: #000;
+      text-align: center;
+    }
+    /* 社群連結樣式 */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: clamp(20px, 5vw, 40px);
+      padding: clamp(10px, 3vw, 20px) 0;
+    }
+    .social-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #000;
+      font-size: clamp(1em, 2.8vw, 1.2em);
+      transition: transform 0.3s ease;
+    }
+    .social-link:hover {
+      transform: translateY(-8px);
+    }
+    .social-link img {
+      width: clamp(60px, 15vw, 80px);
+      height: clamp(60px, 15vw, 80px);
+      object-fit: contain;
+      margin-bottom: 8px;
+      transition: transform 0.3s ease;
+    }
+    .social-link:hover img {
+      transform: scale(1.15);
+    }
+    .social-link span {
+      text-align: center;
+    }
+    /* 新增：自我介紹文字樣式 */
+    .intro-text {
+      font-size: clamp(1.1em, 3vw, 1.3em);
+      line-height: 1.8;
+      color: #000;
+      text-align: center;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+    .spotify-section iframe {
+      width: 100%;
+      height: clamp(250px, 45vw, 360px);
+      border-radius: 10px;
+      border: none;
+    }
+    .quote-section {
+      margin: clamp(15px, 3vw, 20px) 0;
+      background: rgba(255, 255, 255, 0.8);
+      padding: clamp(10px, 4vw, 15px);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .quote-section p {
+      font-size: clamp(1.1em, 3vw, 1.3em);
+      color: rgb(92, 211, 247);
+      margin: 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h1>歡迎來到 梅川伊芙的個人網頁</h1>
+  <main class="container">
+    <section class="section">
+      <h2>自我介紹</h2>
+      <p>高雄高工 資三甲學生</p>
+      <p>可以叫我梅川伊芙，平時喜歡打打遊戲健健身，遊戲可以來找我加好友一起玩！</p>
+      <p>然後我還超喜歡講冷笑話:D</p>
+    </section>
+    <section class="section">
+      <h2>興趣</h2>
+      <p>動漫/小說/打遊戲還有健身</p>
+      <p class="game-list">遊戲坑單：明日方舟/崩壞：星穹鐵道/決區零/FGO宇宙神遊/少前二/特戰英豪/三角洲</p>
+      <p class="anime-list">動漫深坑：Fate系列</p>
+    </section>
+    <section class="section spotify-section">
+      <h2>我的歌單</h2>
+      <iframe src="https://open.spotify.com/embed/playlist/3m9BVfzsc6zJmMvO1z9JK5" allow="encrypted-media" style="border-radius: 10px;" frameborder="0"></iframe>
+    </section>
+    
+    <!-- 社群媒體連結 -->
+    <section class="section">
+      <h2>個人檔案連結</h2>
+      <div class="social-links">
+        <a href="https://www.facebook.com/hades.700838" target="_blank" class="social-link">
+          <img src="image/Facebook.png" alt="Facebook" loading="lazy">
+          <span>Facebook</span>
+        </a>
+        <a href="https://www.instagram.com/ha_des2048/" target="_blank" class="social-link">
+          <img src="image/Instagram.png" alt="Instagram" loading="lazy">
+          <span>Instagram</span>
+        </a>
+        <a href="https://x.com/Drpepper1214858" target="_blank" class="social-link">
+          <img src="image/Twitter.png" alt="Twitter" loading="lazy">
+          <span>Twitter</span>
+        </a>
+      </div>
+      <p>*Instagram認識的才加*</p>
+    </section>
+
+    <!-- 新增：自我介紹區塊 -->
+    <section class="section">
+      <h2>雷點</h2>
+      <p>沒身麼雷點，不熟的只要不要太沒禮貌就行</p>
+      <h2>可能雷你</h2>
+      <p>說話偶爾不經大腦/常常發癲/分享一大堆廢文</p>
+    </section>
+  </main>
+</body>
+</html>
